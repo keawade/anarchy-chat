@@ -7,7 +7,10 @@ import { Html } from '../components/Html';
 
 const helmetContext: FilledContext = {} as FilledContext;
 
-export const serverRenderer = () => (req: express.Request, res: express.Response) => {
+export const serverRenderer = () => (
+  req: express.Request,
+  res: express.Response
+) => {
   return res.send(
     '<!doctype html>' +
       renderToString(
