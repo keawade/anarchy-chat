@@ -4,7 +4,7 @@ const HTTP_PORT = 8080;
 
 const app = express();
 
-app.get('/hello', (req, res) => {
+app.get('/hello-there', (req, res) => {
   res.send('General Kenobi!');
 });
 
