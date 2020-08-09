@@ -13,15 +13,7 @@ export class App extends Component<
     super(props);
     this.state = {
       inputText: '',
-      messages: [
-        {
-          id: '123',
-          user: 'sir-types-a-lot',
-          content:
-            'this is going to be a long message. it is my hope that by the end of this message we shall see if the word wrapping works correctly. is this long enough? yes i think so.',
-        },
-        ...layoutTestData,
-      ],
+      messages: layoutTestData,
     };
   }
 
