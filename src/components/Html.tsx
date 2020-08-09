@@ -17,7 +17,6 @@ export const Html = ({ children, helmetContext: { helmet } }: Props) => (
       {helmet?.link?.toComponent()}
       {helmet?.script?.toComponent()}
       <link
-        // async
         rel='stylesheet'
         href='//cdn.jsdelivr.net/npm/semantic-ui@2.4.1/dist/semantic.min.css'
       />

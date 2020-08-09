@@ -29,3 +29,15 @@ name and chaos / memes ensue.
   * Dark Souls
   * etc
 * Add emoji reactions
+* Notifications
+  * Title icon
+  * Sound (opt in, with toggle!)
+  * Desktop?
+* At least partial Markdown support
+  * Emphasis / strong
+  * Links
+    * Probably should put a warning with full link displayed before leaving site
+  * Images?
+    * Click to collapse/hide/blackout?
+  * Full Markdown support would be neat but complicates interfaces with
+    multiline editing

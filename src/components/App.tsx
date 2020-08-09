@@ -1,6 +1,13 @@
-import React, { Component, FormEventHandler, ChangeEventHandler } from 'react';
+import React, { Component, ChangeEventHandler } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Form, Container, Comment, Segment, Header } from 'semantic-ui-react';
+import {
+  Form,
+  Container,
+  Comment,
+  Segment,
+  Header,
+  FormProps,
+} from 'semantic-ui-react';
 
 import { IMessage } from '../interfaces/IMessage';
 import { layoutTestData } from '../layoutTestData';
@@ -24,8 +31,12 @@ export class App extends Component<
     });
   };
 
-  handleFormSubmit: FormEventHandler = (event) => {
+  handleFormSubmit = (
+    event: React.FormEvent<HTMLFormElement>,
+    data: FormProps,
+  ) => {
     event.preventDefault();
+    event.stopPropagation();
 
     alert('yoooo');
     console.log('Sending message:', this.state.inputText);
