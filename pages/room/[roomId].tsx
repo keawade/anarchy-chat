@@ -78,11 +78,13 @@ const Home: NextPage = () => {
 
       <Container>
         <AppBar>
-          <Toolbar variant='dense'>
-            <Container>
-              <Typography variant='h6'>{roomDisplayName}</Typography>
-            </Container>
-          </Toolbar>
+          <Container>
+            <Toolbar variant='dense'>
+              <Typography variant='h6'>
+                Anarchy Chat | {roomDisplayName}
+              </Typography>
+            </Toolbar>
+          </Container>
         </AppBar>
         <Paper
           style={{
@@ -94,7 +96,7 @@ const Home: NextPage = () => {
         >
           <List style={{ maxWidth: '100%' }}>
             {messages.map((message, index) => (
-              <ListItem key={index}>
+              <ListItem key={`${message.userId}_${message.timestamp}`}>
                 <ListItemAvatar>
                   <Avatar>{message.userId.charAt(0).toUpperCase()}</Avatar>
                 </ListItemAvatar>
